@@ -18,7 +18,7 @@ func TestParsePCAP_Nonexistent(t *testing.T) {
 }
 
 func TestSummarizePCAP_Sample(t *testing.T) {
-	sum, err := SummarizePCAP("../../samples/example.pcap", 5)
+	sum, err := SummarizePCAP("../samples/example.pcap", 5)
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
@@ -31,13 +31,13 @@ func TestSummarizePCAP_Sample(t *testing.T) {
 }
 
 func TestParsePCAP_Valid(t *testing.T) {
-	if err := ParsePCAP("../../samples/example.pcap"); err != nil {
+	if err := ParsePCAP("../samples/example.pcap"); err != nil {
 		t.Fatalf("expected no error for valid pcap: %v", err)
 	}
 }
 
 func TestSummarizePCAP_TopNZero(t *testing.T) {
-	sum, err := SummarizePCAP("../../samples/example.pcap", 0)
+	sum, err := SummarizePCAP("../samples/example.pcap", 0)
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
