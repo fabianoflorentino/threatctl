@@ -14,7 +14,7 @@ func main() {
 	if err := os.MkdirAll("samples", 0o755); err != nil {
 		log.Fatalf("mkdir: %v", err)
 	}
-	f, err := os.Create("samples/example.pcap")
+	f, err := os.Create("internal/samples/example.pcap")
 	if err != nil {
 		log.Fatalf("create pcap: %v", err)
 	}
@@ -49,5 +49,5 @@ func main() {
 	}
 	w.WritePacket(gopacket.CaptureInfo{Timestamp: time.Now(), CaptureLength: len(buf2.Bytes()), Length: len(buf2.Bytes())}, buf2.Bytes())
 
-	log.Println("wrote samples/example.pcap")
+	log.Println("wrote internal/samples/example.pcap")
 }
