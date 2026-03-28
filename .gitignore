@@ -2,3 +2,4 @@ bin/
 vendor/
 *.pcap
 .DS_Store
+*.out
