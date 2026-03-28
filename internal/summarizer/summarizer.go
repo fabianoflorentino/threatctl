@@ -1,4 +1,4 @@
-package core
+package summarizer
 
 import "github.com/fabianoflorentino/threatctl/internal/pcap"
 

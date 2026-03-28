@@ -1,10 +1,10 @@
-package core
+package summarizer
 
 import "testing"
 
 func TestPCAPSummarizer_Summarize(t *testing.T) {
 	s := NewPCAPSummarizer()
-	sum, err := s.Summarize("../../samples/example.pcap", 3)
+	sum, err := s.Summarize("../samples/example.pcap", 3)
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
